@@ -5,7 +5,9 @@ import indexRoutes from './routes/index.routes.js'
 const app = express();
 
 app.use(express.json());
-
+app.get("/", (req, res) => {
+    res.send("API working 🎉");
+});
 app.use('/api/employees', employeeRoutes);
 app.use(indexRoutes);
 
